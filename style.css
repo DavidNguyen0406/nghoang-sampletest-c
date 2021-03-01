@@ -1,0 +1,458 @@
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+## Navigation Bar addition CSS
+## Creative Section
+## Feature Section
+## Blog Section
+## Lets Blog Section
+## Footer Section
+## Copyrights Section
+## Jump links and viewport positioning
+
+/*--------------------------------------------------------------
+## Navigation Bar addition CSS
+--------------------------------------------------------------*/
+.navbar .navbar-nav .nav-link {
+    position: relative;
+}
+
+@media (min-width: 1200px) {
+    .navbar .navbar-nav .nav-menu-items::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: #43739b;
+        color: transparent;
+        width: 0%;
+        content: '.';
+        height: 5px;
+        transition: 0.2s;
+    }
+
+    .navbar .navbar-nav .nav-menu-items:hover::after,
+    .navbar .navbar-nav .nav-menu-items:focus::after {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .nav-link {
+        padding: 60px 0px 20px 0px;
+    }
+}
+
+.light-text {
+    color: var(--light-color);
+}
+
+.dark-text {
+    color: var(--dark-color);
+}
+
+.creative-section {
+    text-align: center;
+    justify-content: center;
+    padding: 400px 0 200px 0px;
+}
+
+@media (max-width: 768px) {
+    .creative-section {
+        padding: 200px 0 100px 0px;
+    }
+}
+
+/*--------------------------------------------------------------
+## Creative Section
+--------------------------------------------------------------*/
+
+.creative-section h1 {
+    font-size: 7.5vw;
+    font-weight: 600;
+    font-family: 'GothamBold';
+
+}
+
+.creative-section .sub {
+    text-transform: uppercase;
+    font-size: 1.2vw;
+    letter-spacing: 0.8vw;
+    font-weight: 100;
+    font-family: 'GothamBook';
+    color: var(--main-color);
+}
+
+.creative-section .scroll p {
+    padding-top: 100px;
+    font-size: 13px;
+}
+
+.creative-section .scroll i {
+    border: 1px solid white;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.creative-section .scroll a {
+    text-decoration: none;
+    color: var(--light-color);
+
+}
+
+@media (max-width: 768px) {
+    .creative-section h1 {
+        font-size: 15vw;
+        font-weight: 600;
+
+    }
+
+    .creative-section p {
+        font-size: 2.4vw;
+        letter-spacing: 1.6vw;
+        font-family: 'GothamBook';
+    }
+}
+
+@media (max-width:768px) {
+    .dark-container {
+        background-color: white;
+        width: 100% !important;
+    }
+}
+
+
+
+/*--------------------------------------------------------------
+## Feature Section
+--------------------------------------------------------------*/
+
+.bg-blue .feature-section {
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.bg-blue .feature-box {
+    color: var(--light-color);
+    text-align: center;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    padding: 0 18px;
+}
+
+.bg-blue .feature-content {
+    justify-content: baseline;
+    align-content: center;
+    flex-direction: column;
+}
+
+.bg-blue .feature-content .description {
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: center;
+    font-size: 15 px;
+}
+
+@media (max-width: 1200px) {
+    .feature-content .description {
+        text-align: center;
+    }
+}
+
+.bg-blue .feature-icon {
+    background-color: var(--main-color-light);
+    padding: 30px;
+    border-radius: 50%;
+}
+
+.bg-blue .feature-box i {
+    font-size: 35px;
+    color: var(--light-color);
+}
+
+.bg-blue .main-features {
+    display: block;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: 'GothamMedium';
+    color: var(--text-title-color);
+}
+
+
+@media all and (max-width:800px) {
+    .bg-blue .feature-box {
+        display: flex;
+        float: none;
+        width: 250px;
+        margin: 20px auto;
+    }
+}
+
+.bg-blue .overlay-parent {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 160px;
+    font-weight: bold;
+    font-family: 'RobotoCondensedBold';
+    color: white;
+}
+
+.bg-blue .overlay-parent span {
+    opacity: 0.18;
+}
+
+.bg-blue .overlay-child {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 90px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--light-color);
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'GothamBook';
+}
+
+/*--------------------------------------------------------------
+## Blog Section
+--------------------------------------------------------------*/
+
+.blog-section {
+    width: 100%;
+}
+
+.blog-content {
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+    margin: 15px 0;
+}
+
+.blog-content.left {
+    color: white;
+    padding: 8% 10% 5% 10%;
+
+}
+
+.blog-content.right {
+    color: var(--dark-grey);
+    padding: 8% 10% 5% 10%;
+
+}
+
+.blog-content h1 {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-family: 'gothammedium';
+    padding-bottom: 20px;
+}
+
+.blog-content span {
+    font-size: 13px;
+    font-family: 'GothamBook';
+    line-height: 30px;
+}
+
+.blog-content p {
+    font-size: 15px;
+    font-family: 'GothamBook';
+}
+
+.blog-image.right {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    bottom: -15px;
+    width: calc(50vw);
+    background: url(/asset/images/blog-image-01-01.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+
+.blog-image.left {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    bottom: -15px;
+    width: calc(50vw);
+    background: url(/asset/images/blog-image-02-01.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    .blog-image.left,
+    .blog-image.right {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        width: 100%;
+        background-size: cover;
+    }
+}
+
+/*--------------------------------------------------------------
+## Lets Blog Section
+--------------------------------------------------------------*/
+
+.bg-light-color .feature-section {
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.bg-light-color .feature-box {
+    color: var(--light-color);
+    text-align: center;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    padding: 0 18px;
+}
+
+.bg-light-color .feature-content {
+    justify-content: baseline;
+    align-content: center;
+    flex-direction: column;
+}
+
+.bg-light-color .feature-content img {
+    width: 100%;
+    height: auto;
+}
+
+.bg-light-color .feature-content .description {
+    text-align: center;
+
+    font-size: 14 px;
+    color: var(--dark-grey)
+}
+
+@media (max-width: 1200px) {
+    .feature-content .description {
+        text-align: center;
+    }
+}
+
+.bg-light-color .main-features {
+    display: block;
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-block-start: 2em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: 'GothamMedium';
+    color: var(--main-color);
+}
+
+
+@media all and (max-width:800px) {
+    .bg-light-color .feature-box {
+        display: flex;
+        float: none;
+        width: 250px;
+        margin: 20px auto;
+    }
+}
+
+.bg-light-color .overlay-parent {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 160px;
+    font-weight: bold;
+    font-family: 'RobotoCondensedBold';
+    color: rgba(51, 51, 51, 0.18);
+    ;
+}
+
+
+.bg-light-color .overlay-child {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 90px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--dark-grey);
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'GothamBook';
+}
+
+/*--------------------------------------------------------------
+## Footer Section
+--------------------------------------------------------------*/
+.footer-section {
+    padding: 80px 0;
+}
+
+.footer-section p {
+    color: white;
+}
+
+.footer-section i {
+    font-size: 60px;
+    color: white;
+}
+
+/*--------------------------------------------------------------
+## Copyrights Section
+--------------------------------------------------------------*/
+.bg-copyrights .container {
+    padding: 15px 0;
+
+}
+
+.bg-copyrights p {
+    padding: 15px 0;
+    margin: 0;
+    color: white;
+}
+
+.bg-copyrights {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 80px;
+}
+
+/*--------------------------------------------------------------
+## Jump links and viewport positioning
+--------------------------------------------------------------*/
+
+.extra-padding-bottom {
+    padding-bottom: 100px;
+}
+
+#features,
+#blog-section {
+    padding-top: 110px;
+    margin-top: -110px;
+    -webkit-background-clip: content-box;
+    background-clip: content-box;
+}
